@@ -1,12 +1,11 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_snippet/defaults/bottom_navigation_data.dart';
-
-import 'screens/home.dart';
+import 'package:flutter_snippet/screens/home_screen.dart';
+import 'package:flutter_snippet/screens/products/product_details_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // routes: {
+      //   '/': (context) => const HomeScreen(),
+      // },
       theme: ThemeData(
         colorScheme: ColorScheme(
           brightness: Brightness.dark,
@@ -33,22 +35,33 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.blueGrey.shade900,
         ),
+       elevatedButtonTheme: ElevatedButtonThemeData(
+         style: ElevatedButton.styleFrom(
+          primary: Colors.amber.shade700,
+          onPrimary: Colors.white
+         )
+       ),
         fontFamily: 'Poppins',
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           headline1: TextStyle(fontSize: 32.0, color: Colors.white, fontWeight: FontWeight.w600),
-          headline2: TextStyle(fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.w500),
+          headline2: TextStyle(fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.w600),
           headline3: TextStyle(fontSize: 18.0, color: Colors.white, fontWeight: FontWeight.w500),
           headline4: TextStyle(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.w500),
           headline5: TextStyle(fontSize: 13.5, color: Colors.white, fontWeight: FontWeight.w400),
           headline6: TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w400),
-          // headlineLarge: TextStyle(fontSize: 30.0, color: Colors.white, fontWeight: FontWeight.w600),
-          // headlineMedium: TextStyle(fontSize: 25.0, color: Colors.white, fontWeight: FontWeight.w600),
-          // headlineSmall: TextStyle(fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.w600),          
           bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Poppins'),
+          subtitle1: TextStyle(fontSize: 12.0, fontFamily: 'Poppins', color: Colors.blueGrey),
         ),
-        scaffoldBackgroundColor: Colors.blueGrey.shade900
+        scaffoldBackgroundColor: Colors.blueGrey.shade900,
+        tabBarTheme: TabBarTheme(
+          labelColor: Colors.amber.shade700, 
+          unselectedLabelColor: Colors.blueGrey,
+          indicator: const BoxDecoration(
+            color: Colors.transparent
+          ),
+        ),
       ),
-      home: Home(),
+      home: const HomeScreen(),
     );
   }
 }

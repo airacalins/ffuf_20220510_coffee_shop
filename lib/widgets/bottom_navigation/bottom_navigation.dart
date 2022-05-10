@@ -26,19 +26,27 @@ class _BottomNavigationState extends State<BottomNavigation> {
         BottomNavigationBarItem(
           icon: Icon(BottomNavigationData.bottomNavIcon[0]),
           backgroundColor: Theme.of(context).colorScheme.background,
-          label: ""
+          label: "",
         ),
         BottomNavigationBarItem(
           icon: Icon(BottomNavigationData.bottomNavIcon[1]),
-          label: ""
+          backgroundColor: Theme.of(context).colorScheme.background,
+          label: "",
         ),
         BottomNavigationBarItem(
           icon: Icon(BottomNavigationData.bottomNavIcon[2]),
-          label: ""
+          backgroundColor: Theme.of(context).colorScheme.background,
+          label: "",
         ),
         BottomNavigationBarItem(
           icon: Icon(BottomNavigationData.bottomNavIcon[3]),
-          label: ""
+          backgroundColor: Theme.of(context).colorScheme.background,
+          label: "",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(BottomNavigationData.bottomNavIcon[4]),
+          backgroundColor: Theme.of(context).colorScheme.background,
+          label: "",
         ),
       ],
     );

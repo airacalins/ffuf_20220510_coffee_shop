@@ -1,35 +1,43 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 
-class CoffeeCard extends StatelessWidget {
+class ProductCard extends StatelessWidget {
   final String title = 'Cappuccino';
   final String image = 'assets/images/coffee_bean/arabica.jpg';
   final String category = 'Coffee Bean';
   final double price = 300.00;
 
-
-
-  const CoffeeCard({ Key? key }) : super(key: key);
+  const ProductCard({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-          color: Theme.of(context).colorScheme.onBackground,
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: const [
+              0.1,
+              0.9,
+            ],
+            colors: [
+             Theme.of(context).colorScheme.onBackground,
+             Theme.of(context).colorScheme.background
+            ],
+          ),
+          borderRadius: const BorderRadius.all(const Radius.circular(20)),
         ),
-        margin: EdgeInsets.all(10.0),
-        padding: EdgeInsets.all(10.0),
+        margin: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          // ignore: prefer_const_literals_to_create_immutables
           children: [
             Container(
               height: 150,
               child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
                 child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.cover,
@@ -47,11 +55,11 @@ class CoffeeCard extends StatelessWidget {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      borderRadius: const BorderRadius.all(const Radius.circular(10.0)),
                       color: Theme.of(context).colorScheme.background,
                     ),
-                    padding: EdgeInsets.all(5),
-                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    padding: const EdgeInsets.all(5),
+                    margin: const EdgeInsets.symmetric(vertical: 5.0),
                     child: Text(
                       category,
                       style: Theme.of(context).textTheme.headline6
@@ -79,14 +87,15 @@ class CoffeeCard extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
                     color: Theme.of(context).colorScheme.secondary,
                   ),
                   height: 40.0,
                   width: 40.0,
                   child: IconButton(
+                    splashRadius: 30,
                     onPressed: () {}, 
-                    icon: Icon(Icons.add),
+                    icon: const Icon(Icons.add),
                   ),
                 )
               ],

@@ -1,0 +1,109 @@
+{
+    "coffees": [
+        {
+            "id": "c1",
+            "imageUrl": "assets/images/coffee_bean/arabica.jpg",
+            "title": "Arabica",
+            "categoryId": 1,
+            "price": 120.00
+        },
+        {
+            "id": "c2",
+            "imageUrl": "assets/images/coffee_bean/robusta.jpg",
+            "title": "Robusta",
+            "categoryId": 1,
+            "price": 120.00
+        },
+        {
+            "id": "c3",
+            "imageUrl": "assets/images/hot_coffee/black_coffee.jpg",
+            "title": "Black Coffee",
+            "categoryId": 2,
+            "price": 150.00
+        },
+        {
+            "id": "c4",
+            "imageUrl": "assets/images/hot_coffee/decaf.jpg",
+            "title": "Decaf",
+            "categoryId": 2,
+            "price": 140.00
+        },
+        {
+            "id": "c5",
+            "imageUrl": "assets/images/hot_coffee/espresso.jpg",
+            "title": "Espresso",
+            "categoryId": 2,
+            "price": 160.00
+        },        
+        {
+            "id": "c6",
+            "imageUrl": "assets/images/hot_coffee/latte.jpg",
+            "title": "Latte",
+            "categoryId": 2,
+            "price": 120.00
+        },        
+        {
+            "id": "c7",
+            "imageUrl": "assets/images/hot_coffee/cappuccino.jpg",
+            "title": "Cappuccino",
+            "categoryId": 2,
+            "price": 130.00
+        },        
+        {
+            "id": "c8",
+            "imageUrl": "assets/images/hot_coffee/macchiato.jpg",
+            "title": "Macchiato",
+            "categoryId": 2,
+            "price": 140.00
+        },        
+        {
+            "id": "c9",
+            "imageUrl": "assets/images/hot_coffee/americano.jpg",
+            "title": "Americano",
+            "categoryId": 2,
+            "price": 150.00
+        },               
+        {
+            "id": "c10",
+            "imageUrl": "assets/images/hot_coffee/fat_white.jpg",
+            "title": "Fat White",
+            "categoryId": 2,
+            "price": 120.00
+        },        
+        {
+            "id": "c11",
+            "imageUrl": "assets/images/iced_coffee/iced_coffee.jpg",
+            "title": "Iced Coffee",
+            "categoryId": 3,
+            "price": 120.00
+        },         
+        {
+            "id": "c12",
+            "imageUrl": "assets/images/iced_coffee/iced_latte.jpg",
+            "title": "Iced Latte",
+            "categoryId": 3,
+            "price": 120.00
+        },        
+        {
+            "id": "c13",
+            "imageUrl": "assets/images/iced_coffee/cold_brew.jpg",
+            "title": "Cold Brew",
+            "categoryId": 3,
+            "price": 140.00
+        },        
+        {
+            "id": "c14",
+            "imageUrl": "assets/images/iced_coffee/nitro_cold_brew.jpg",
+            "title": "Nitro Cold Brew",
+            "categoryId": 3,
+            "price": 160.00
+        },        
+        {
+            "id": "c15",
+            "imageUrl": "assets/images/iced_coffee/frappe.jpg",
+            "title": "Frappe",
+            "categoryId": 3,
+            "price": 170.00
+        }
+    ]
+}
