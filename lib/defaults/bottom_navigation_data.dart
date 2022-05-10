@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BottomNavigation {
+class BottomNavigationData {
 
   static final bottomNavIcon = [
     Icons.home,

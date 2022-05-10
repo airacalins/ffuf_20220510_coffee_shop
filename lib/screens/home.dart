@@ -1,8 +1,9 @@
 
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:flutter_snippet/defaults/bottom_navigation.dart';
+import 'package:flutter_snippet/widgets/bottom_navigation/bottom_navigation.dart';
+import 'package:flutter_snippet/widgets/card/coffee_card.dart';
 
 class Home extends StatefulWidget {
   const Home({ Key? key }) : super(key: key);
@@ -12,7 +13,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int activeNavigationIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -29,45 +29,27 @@ class _HomeState extends State<Home> {
           ],
           elevation: 0,
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          type: BottomNavigationBarType.shifting,
-          elevation: 60,
-          selectedItemColor: Theme.of(context).colorScheme.secondary,
-          unselectedItemColor: Theme.of(context).colorScheme.onPrimary,
-          currentIndex: activeNavigationIndex,
-          onTap: (value) => setState(() => activeNavigationIndex = value),
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(BottomNavigation.bottomNavIcon[0]),
-              backgroundColor: Theme.of(context).colorScheme.background,
-              label: ""
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(BottomNavigation.bottomNavIcon[1]),
-              label: ""
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(BottomNavigation.bottomNavIcon[2]),
-              label: ""
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(BottomNavigation.bottomNavIcon[3]),
-              label: ""
-            ),
-          ],
-      ),
+        bottomNavigationBar: BottomNavigation(),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               padding: const EdgeInsets.all(15.0),
-              width: 250,
+              width: 300,
               child: Text(
                 'Find the best coffee for you',
                 style: Theme.of(context).textTheme.headline1,
               ),
             ),
+            Container(
+              child: Row(
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  CoffeeCard(),
+                  CoffeeCard()
+                ],
+              ),
+            )
           ],
         )
       ),
