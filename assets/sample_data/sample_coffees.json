@@ -1,0 +1,94 @@
+{
+    "coffees": [
+        {
+            "id": "c1",
+            "image": "assets/images/coffee_bean/arabica.jpg",
+            "title": "Arabica",
+            "category_id": 1
+        },
+        {
+            "id": "c2",
+            "image": "assets/images/coffee_bean/robusta.jpg",
+            "title": "Robusta",
+            "category_id": 1
+        },
+        {
+            "id": "c3",
+            "image": "assets/images/hot_coffee/black_coffee.jpg",
+            "title": "Black Coffee",
+            "category_id": 2
+        },
+        {
+            "id": "c4",
+            "image": "assets/images/hot_coffee/decaf.jpg",
+            "title": "Decaf",
+            "category_id": 2
+        },
+        {
+            "id": "c5",
+            "image": "assets/images/hot_coffee/espresso.jpg",
+            "title": "Espresso",
+            "category_id": 2
+        },        
+        {
+            "id": "c6",
+            "image": "assets/images/hot_coffee/latte.jpg",
+            "title": "Latte",
+            "category_id": 2
+        },        
+        {
+            "id": "c7",
+            "image": "assets/images/hot_coffee/cappuccino.jpg",
+            "title": "Cappuccino",
+            "category_id": 2
+        },        
+        {
+            "id": "c8",
+            "image": "assets/images/hot_coffee/macchiato.jpg",
+            "title": "Macchiato",
+            "category_id": 2
+        },        
+        {
+            "id": "c9",
+            "image": "assets/images/hot_coffee/americano.jpg",
+            "title": "Americano",
+            "category_id": 2
+        },               
+        {
+            "id": "c10",
+            "image": "assets/images/hot_coffee/fat_white.jpg",
+            "title": "Fat White",
+            "category_id": 2
+        },        
+        {
+            "id": "c11",
+            "image": "assets/images/iced_coffee/iced_coffee.jpg",
+            "title": "Iced Coffee",
+            "category_id": 3
+        },         
+        {
+            "id": "c12",
+            "image": "assets/images/iced_coffee/iced_latte.jpg",
+            "title": "Iced Latte",
+            "category_id": 3
+        },        
+        {
+            "id": "c13",
+            "image": "assets/images/iced_coffee/cold_brew.jpg",
+            "title": "Cold Brew",
+            "category_id": 3
+        },        
+        {
+            "id": "c14",
+            "image": "assets/images/iced_coffee/nitro_cold_brew.jpg",
+            "title": "Nitro Cold Brew",
+            "category_id": 3
+        },        
+        {
+            "id": "c15",
+            "image": "assets/images/iced_coffee/frappe.jpg",
+            "title": "Frappe",
+            "category_id": 3
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "categories": [
+        {
+            "id": "cat1",
+            "name": "Coffee Beans"
+        },
+        {
+            "id": "cat2",
+            "name": "Hot Coffee"
+        },
+        {
+            "id": "cat3",
+            "name": "Cold Coffee"
+        }
+    ]
+
+}
