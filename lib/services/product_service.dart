@@ -3,13 +3,13 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_snippet/models/product.dart';
 
-class MockProductService {
+class ProductService {
   Future<List<Product>> getProducts() async {
     await Future.delayed(
       const Duration(milliseconds: 1000)
     );
 
-    final jsonString = await rootBundle.loadString('assets/sample_data/sample_product.json');
+    final jsonString = await rootBundle.loadString('assets/sample_data/products.json');
     final Map<String, dynamic> json = jsonDecode(jsonString);
 
     if(json['products'] != null) {

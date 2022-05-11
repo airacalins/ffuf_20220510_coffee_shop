@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_snippet/screens/home_screen.dart';
+import 'package:flutter_snippet/screens/products/product_details_screen.dart';
 
 
 void main() {
@@ -58,8 +59,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      // home: ProductHorizontalGrid(),
-      home: const HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        ProductDetailsScreen.routeName: ((context) => ProductDetailsScreen())
+      },
+      // home: const HomeScreen(),
     );
   }
 }

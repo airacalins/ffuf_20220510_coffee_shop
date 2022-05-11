@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snippet/widgets/widgets.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
+  static const routeName = '/product-detail';
+
   const ProductDetailsScreen({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final productId = ModalRoute.of(context)?.settings.arguments as String;
 
     const String title = 'Cappuccino';
     const String image = 'assets/images/coffee_bean/arabica.jpg';
@@ -33,7 +36,7 @@ class ProductDetailsScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 5,
-              child: ProductDetailsCard(title: title, category: category)
+              child: ProductDetailsCard(title: productId, category: category)
             ),
             Expanded(
               flex: 1,
