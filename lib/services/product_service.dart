@@ -30,5 +30,8 @@ class ProductService {
     return products.where((p) => p.id == id).first;
   }
 
-
+  Future<List<Product>> getProductsByCategoryId(String categoryId) async {
+    final products = await getProducts();
+    return products.where((p) => p.categoryId == categoryId).toList();
+  }
 }

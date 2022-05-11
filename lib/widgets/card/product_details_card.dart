@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_snippet/models/models.dart';
 import 'package:flutter_snippet/widgets/chip/primary_chip.dart';
 
 class ProductDetailsCard extends StatelessWidget {
-  final String title;
-  final String category;
-  const ProductDetailsCard({ 
-    Key? key,
-    required this.title,
-    required this.category
-  }) : super(key: key);
+  final Product product;
+
+  const ProductDetailsCard(this.product, {Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +15,8 @@ class ProductDetailsCard extends StatelessWidget {
       height: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        image: const DecorationImage(
-          image: AssetImage('assets/images/coffee_bean/arabica.jpg'),
+        image: DecorationImage(
+          image: AssetImage(product.imageUrl),
           fit: BoxFit.cover,
         ),
       ),
@@ -41,10 +38,10 @@ class ProductDetailsCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    title,
+                    product.title,
                     style: Theme.of(context).textTheme.headline3
                   ),
-                  PrimaryChip(category)
+                  PrimaryChip(product.categoryId)
                 ],
               ),
             ),
