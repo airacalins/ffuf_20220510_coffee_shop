@@ -1,7 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:flutter_snippet/screens/products/product_details_screen.dart';
+import 'package:flutter_snippet/screens/product/product_details_screen.dart';
 import 'package:flutter_snippet/widgets/widgets.dart';
 
 import '../../models/product.dart';
@@ -17,8 +17,7 @@ class ProductCard extends StatelessWidget {
     return GestureDetector(
       onTap: (() => Navigator.of(context).pushNamed(
         ProductDetailsScreen.routeName, 
-        arguments: product.id
-      )),
+        arguments: product.id)),
       child: GradientContainer(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

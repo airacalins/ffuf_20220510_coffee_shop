@@ -25,5 +25,10 @@ class ProductService {
     }
   }
 
+  Future<Product> getProductById(String id) async{
+    final products = await getProducts();
+    return products.where((p) => p.id == id).first;
+  }
+
 
 }

@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_snippet/screens/favorite/favorite_screen.dart';
 import 'package:flutter_snippet/screens/home_screen.dart';
-import 'package:flutter_snippet/screens/products/product_details_screen.dart';
-
+import 'package:flutter_snippet/screens/order/orders_screen.dart';
+import 'package:flutter_snippet/screens/product/product_details_screen.dart';
+import 'package:flutter_snippet/screens/product/products_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -62,7 +64,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),
-        ProductDetailsScreen.routeName: ((context) => ProductDetailsScreen())
+        ProductsScreen.routeName: ((context) => ProductsScreen()),
+        ProductDetailsScreen.routeName: ((context) => ProductDetailsScreen()),
+        OrdersScreen.routeName: ((context) => OrdersScreen()),
+        FavoriteScreen.routeName: ((context) => FavoriteScreen())
       },
       // home: const HomeScreen(),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snippet/defaults/bottom_navigation_data.dart';
+import 'package:flutter_snippet/screens/product/products_screen.dart';
+
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({ Key? key }) : super(key: key);
@@ -21,7 +23,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
       selectedItemColor: Theme.of(context).colorScheme.secondary,
       unselectedItemColor: Theme.of(context).colorScheme.onPrimary,
       currentIndex: activeNavigationIndex,
-      onTap: (value) => setState(() => activeNavigationIndex = value),
+      onTap: (value) => setState(() {
+        Navigator.of(context).pushNamed(BottomNavigationData.screenRoutes[value]);
+      }),
       items: [
         BottomNavigationBarItem(
           icon: Icon(BottomNavigationData.bottomNavIcon[0]),
@@ -40,11 +44,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
         ),
         BottomNavigationBarItem(
           icon: Icon(BottomNavigationData.bottomNavIcon[3]),
-          backgroundColor: Theme.of(context).colorScheme.background,
-          label: "",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(BottomNavigationData.bottomNavIcon[4]),
           backgroundColor: Theme.of(context).colorScheme.background,
           label: "",
         ),

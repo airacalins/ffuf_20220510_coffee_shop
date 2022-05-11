@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_snippet/models/product.dart';
-import 'package:flutter_snippet/screens/products/product_details_screen.dart';
 import 'package:flutter_snippet/services/product_service.dart';
 import 'package:flutter_snippet/widgets/loading/loading_indicator.dart';
 import 'package:flutter_snippet/widgets/widgets.dart';

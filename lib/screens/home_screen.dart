@@ -16,7 +16,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   final categoryService = CategoryService();
 
   AppBar appBar = AppBar(
