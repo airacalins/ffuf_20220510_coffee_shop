@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_snippet/widgets/chip/primary_chip.dart';
 
 class ProductDetailsCard extends StatelessWidget {
   final String title;
@@ -43,13 +44,7 @@ class ProductDetailsCard extends StatelessWidget {
                     title,
                     style: Theme.of(context).textTheme.headline3
                   ),
-                  Chip(
-                    label: Text(
-                      category,
-                      style: Theme.of(context).textTheme.headline6
-                    ),
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                  ),
+                  PrimaryChip(category)
                 ],
               ),
             ),

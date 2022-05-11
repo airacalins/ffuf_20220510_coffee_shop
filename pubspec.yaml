@@ -25,6 +25,7 @@ flutter:
     - assets/images/iced_coffee/
     - assets/images/hot_coffee/
     - assets/images/
+    - assets/sample_data/
   fonts:
     - family: Poppins
       fonts:

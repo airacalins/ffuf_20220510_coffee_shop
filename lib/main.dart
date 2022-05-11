@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_snippet/screens/home_screen.dart';
-import 'package:flutter_snippet/screens/products/product_details_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +15,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // routes: {
-      //   '/': (context) => const HomeScreen(),
-      // },
       theme: ThemeData(
         colorScheme: ColorScheme(
           brightness: Brightness.dark,
@@ -61,6 +58,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      // home: ProductHorizontalGrid(),
       home: const HomeScreen(),
     );
   }

@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_snippet/widgets/button_group/sizes_button_group.dart';
-import 'package:flutter_snippet/widgets/card/product_details_card.dart';
-import 'package:flutter_snippet/widgets/texts/subtitle_1.dart';
+import 'package:flutter_snippet/widgets/widgets.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({ Key? key }) : super(key: key);

@@ -1,89 +1,52 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:flutter_snippet/widgets/widgets.dart';
+
+import '../../models/product.dart';
+
 
 class ProductCard extends StatelessWidget {
-  final String title = 'Cappuccino';
-  final String image = 'assets/images/coffee_bean/arabica.jpg';
-  final String category = 'Coffee Bean';
-  final double price = 300.00;
+  final Product product;
 
-  const ProductCard({ Key? key }) : super(key: key);
+  const ProductCard({ Key? key, required this.product }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: const [
-              0.1,
-              0.9,
-            ],
-            colors: [
-             Theme.of(context).colorScheme.onBackground,
-             Theme.of(context).colorScheme.background
-            ],
-          ),
-          borderRadius: const BorderRadius.all(const Radius.circular(20)),
-        ),
-        margin: const EdgeInsets.all(10.0),
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 150,
+    return GradientContainer(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              width: double.infinity,
               child: ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
                 child: Image(
-                  image: AssetImage(image),
+                  image: AssetImage(product.imageUrl),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: Theme.of(context).textTheme.headline3
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(const Radius.circular(10.0)),
-                      color: Theme.of(context).colorScheme.background,
-                    ),
-                    padding: const EdgeInsets.all(5),
-                    margin: const EdgeInsets.symmetric(vertical: 5.0),
-                    child: Text(
-                      category,
-                      style: Theme.of(context).textTheme.headline6
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Row(
+          ),
+          Expanded(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Text(
-                        '₱ ',
-                        style: Theme.of(context).textTheme.headline4,
-                      ),
-                      Text(
-                        price.toStringAsFixed(2),
-                        style: Theme.of(context).textTheme.headline4,
-                      ),
-                    ],
-                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      product.title,
+                      style: Theme.of(context).textTheme.headline4
+                    ),
+                    Container(
+                      child: Headline5(product.price.toStringAsFixed(2))
+                    ),
+                  ],
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -97,11 +60,11 @@ class ProductCard extends StatelessWidget {
                     onPressed: () {}, 
                     icon: const Icon(Icons.add),
                   ),
-                )
+                ),
               ],
-            )
-          ],
-        )
+            ),
+          ),
+        ],
       ),
     );
   }
